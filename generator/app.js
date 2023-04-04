@@ -23,7 +23,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', usersRouter);
 app.use('/register', usersRouter);
-app.use('search-results', usersRouter);
+app.use('/search-results', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
