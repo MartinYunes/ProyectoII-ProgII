@@ -1,7 +1,7 @@
-let loginCon = {
+let loginControllers = {
     login: function(req,res){
         res.render('login')
     }
 };
 
-module.exports = loginCon
+module.exports = loginControllers
