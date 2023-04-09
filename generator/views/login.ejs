@@ -22,7 +22,6 @@
 				<!-- conectar <%= include('./partials/headerNoLogueado') %> -->
 
 	<!-- /Header -->
-
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
@@ -37,10 +36,19 @@
 			////////////////
 			</h2>
 
+			<form action="./profile.ejs" method="GET" class=""
+			
+			
+			<label>USUARIO</label><input type="email" placeholder="EMAIL" >
+			<label>CONTRASEÑA</label><input type="password" placeholder="PASSWORD" >
+			<label>RECUERDAME</label><input type="checkbox" >
+			<button type="sumbit">LOG IN</button>
+			
+		
+			</form>
 
 	<!-- footer -->
-	<%- include('./partials/footer') %>
-
+	<%- Include("./partials/footer") %>
 	<!-- /footer -->
 </body>
 
