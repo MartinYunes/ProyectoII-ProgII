@@ -115,7 +115,7 @@ let datos = {
     },
     {
         modeloAuto: 'Dodge Challenger',
-        imagen: '/stylesheets/images/products/dodge-challenger.jpeg',
+        imagen: '/stylesheets/images/products/dodge_challenger.jpeg',
         descripcion: 'El Dodge Challenger es un auto deportivo americano que ofrece un estilo retro, una experiencia de conducción emocionante y una amplia variedad de opciones de motor.',
         fechaPub: '10/04/2023',
         id: 9,
