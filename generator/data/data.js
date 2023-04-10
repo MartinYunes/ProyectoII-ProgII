@@ -1,9 +1,9 @@
 let data = {
     usuario:{
-        userName: '',
-        pw: '',
-        email: '',
-        dni: '',
+        userName: 'MartinMateo',
+        pw: 'YunesSilveri',
+        email: 'MMMS@gmail.com',
+        dni: '44900630',
         fotoPerfil: '',
 
 
@@ -15,9 +15,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 1,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Muy eficiente',
+            fotoPerfil: null,
     
         }]
 
@@ -29,9 +29,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 2,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Cuantos kilometros lleva?',
+            fotoPerfil: null,
     
         }]
     },
@@ -42,9 +42,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 3,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Veloz!',
+            fotoPerfil: null,
     
         }]
     },
@@ -55,9 +55,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 4,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Good car!',
+            fotoPerfil: null,
     
         }]
     },
@@ -68,9 +68,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 5,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Se puede pagar en cuotas?',
+            fotoPerfil: null,
     
         }]
     },
@@ -81,9 +81,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 6,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'No me sirve',
+            fotoPerfil: null,
     
         }]
     },
@@ -94,9 +94,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 7,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Muy caro',
+            fotoPerfil: null,
     
         }]
     },
@@ -107,9 +107,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 8,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Fachero',
+            fotoPerfil: null,
     
         }]
     },
@@ -120,9 +120,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 9,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Buen estilo',
+            fotoPerfil: null,
     
         }]
     },
@@ -133,9 +133,9 @@ let data = {
         fechaPub: '10/04/2023',
         id: 10,
         comentarios: [ {
-            userName: '',
-            comentario: '',
-            fotoPerfil: '',
+            userName: 'MartinMateo',
+            comentario: 'Grandioso!',
+            fotoPerfil: null,
     
         }]
     }
