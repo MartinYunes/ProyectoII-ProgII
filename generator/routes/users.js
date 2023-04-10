@@ -11,4 +11,4 @@ router.get('/profile',userController.profile )
 router.get('/edit-profile', userController.edit)
 
 
-module.exports = router
+module.exports = router;
