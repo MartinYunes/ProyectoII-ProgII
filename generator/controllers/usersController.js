@@ -1,18 +1,18 @@
 var userController = {
     login: function(req, res){
-        res.send('Aca mandamos el login')
+        res.render('Login')
     },
 
     register: function(req, res){
-        res.send('Aca mandamos el register')
+        res.render('Register')
     },
 
     profile: function(req, res){
-        res.send('Aca mandamos el profile')
+        res.render('Profile')
     },
 
     edit: function(req, res){
-        res.send('Aca mandamos el edit')
+        res.render('Profile edit')
     },
 }
 

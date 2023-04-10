@@ -13,7 +13,13 @@ let data = {
         imagen: '',
         descripcion: '',
         fechaPub: '',
-        id: 1
+        id: 1,
+        comentarios: [ {
+            userName: '',
+            comentario: '',
+            fotoPerfil: '',
+    
+        }]
 
     },
     {
@@ -21,37 +27,42 @@ let data = {
         imagen: '',
         descripcion: '',
         fechaPub: '',
-        id: 2
+        id: 2,
+        comentarios: [ {
+            userName: '',
+            comentario: '',
+            fotoPerfil: '',
+    
+        }]
     },
     {
         modeloAuto: '',
         imagen: '',
         descripcion: '',
         fechaPub: '',
-        id: 3
+        id: 3,
+        comentarios: [ {
+            userName: '',
+            comentario: '',
+            fotoPerfil: '',
+    
+        }]
     },
     {
         modeloAuto: '',
         imagen: '',
         descripcion: '',
         fechaPub: '',
-        id: 4
+        id: 4,
+        comentarios: [ {
+            userName: '',
+            comentario: '',
+            fotoPerfil: '',
+    
+        }]
     }
 
-    ],
-    comentarios: [ {
-        userName: '',
-        comentario: '',
-        fotoPerfil: '',
-
-    },
-    {
-        userName: '',
-        comentario: '',
-        fotoPerfil: '',
-    },
-
-    ]
+    ],  
 }
 
 module.exports = datos
