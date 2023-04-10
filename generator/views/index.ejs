@@ -24,14 +24,15 @@
 			<!-- Show the "ultimos" products -->
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
+					<% for(let i= 0; i < productos.length; i++) %>
 					<a href="product.html">
 						<figure class="product-box_image">
-							<img src="/stylesheets/images/products/default-image.png" alt="cafetera moulinex">
+							<img src=<%= productos[i].imagen%> alt="<% productos[i].modeloAuto %>">
 						</figure>
 						<article class="product-box_data">
-							<h2>Nombre del producto</h2>
-							<p>Descripción corta del producto Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus ex</p>
-							<p>Comentarios: 12</p>
+							<h2><% productos[i].modeloAuto %></h2>
+							<p><% productos[i].descripcion %></p>
+							<p><% productos[i].comentarios %></p>
 						</article>
 					</a>
 				</section>
