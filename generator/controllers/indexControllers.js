@@ -4,7 +4,7 @@ const indexController = {
     index: function(req,res){
         return res.render('index', {
             productos: data.productos,
-            usuarioLogueado: false,
+          
         })
     }
 }
