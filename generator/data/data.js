@@ -39,12 +39,7 @@ let datos = {
         descripcion: 'El Chevrolet Camaro es un auto deportivo americano que ofrece una experiencia de conducción emocionante, un estilo agresivo y un precio accesible.',
         fechaPub: '10/04/2023',
         id: 4,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Good car!',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'BMW M5',
@@ -52,12 +47,7 @@ let datos = {
         descripcion: 'El BMW M5 es un sedán deportivo de lujo que ofrece un rendimiento excepcional, una tecnología avanzada y un estilo elegante',
         fechaPub: '10/04/2023',
         id: 5,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Se puede pagar en cuotas?',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Audi R8',
@@ -65,12 +55,7 @@ let datos = {
         descripcion: 'El Audi R8 es un súper deportivo alemán que ofrece un rendimiento impresionante, un diseño aerodinámico y una tecnología de vanguardia.',
         fechaPub: '10/04/2023',
         id: 6,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'No me sirve',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Porsche 911',
@@ -78,12 +63,7 @@ let datos = {
         descripcion: 'El Porsche 911 es un auto deportivo alemán que ofrece un rendimiento de alto nivel, un diseño icónico y una experiencia de conducción emocionante.',
         fechaPub: '10/04/2023',
         id: 7,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Muy caro',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Mercedez-Benz AMG GT ',
@@ -91,12 +71,7 @@ let datos = {
         descripcion: ' El Mercedes-Benz AMG GT es un súper deportivo de lujo que ofrece un rendimiento de clase mundial, un diseño elegante y una tecnología avanzada.',
         fechaPub: '10/04/2023',
         id: 8,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Fachero',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Dodge Challenger',
@@ -104,12 +79,7 @@ let datos = {
         descripcion: 'El Dodge Challenger es un auto deportivo americano que ofrece un estilo retro, una experiencia de conducción emocionante y una amplia variedad de opciones de motor.',
         fechaPub: '10/04/2023',
         id: 9,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Buen estilo',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Toyota Supra',
@@ -117,12 +87,7 @@ let datos = {
         descripcion: 'El Toyota Supra es un deportivo japonés que ofrece un rendimiento emocionante, un diseño elegante y una historia icónica en el mundo de los autos deportivos.',
         fechaPub: '10/04/2023',
         id: 10,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Grandioso!',
-            fotoPerfil: null,
-    
-        }]
+        
     }],
     comentarios: [ {
         userName: 'MartinMateo',
@@ -130,16 +95,44 @@ let datos = {
         fotoPerfil: 'stylesheets/images/users/perfil1.webp',
 
     },{
-        userName: 'MartinMateo',
+        userName: 'Julian',
         comentario: 'Cuantos kilometros lleva?',
-        fotoPerfil: null, 
+        fotoPerfil: '/stylesheets/images/users/perfil2.png', 
     },{
-        userName: 'MartinMateo',
+        userName: 'JuanRoman10',
         comentario: 'Veloz!',
+        fotoPerfil: null,
+    },{
+        userName: 'Sebastiann_',
+        comentario: 'Good car!',
+        fotoPerfil: null,
+    },{
+        userName: 'Sofia',
+        comentario: 'Se puede pagar en cuotas?',
+        fotoPerfil: null,
+    },{
+        userName: 'Julieta',
+        comentario: 'No me sirve',
+        fotoPerfil: null,
+    },{
+        userName: 'Vero',
+        comentario: 'Muy caro',
+        fotoPerfil: null,
+    },{
+        userName: 'Ale',
+        comentario: 'Fachero',
+        fotoPerfil: null,
+    },{
+        userName: 'Tomaseche',
+        comentario: 'Buen estilo',
+        fotoPerfil: null,
+    },{
+        userName: 'Brian',
+        comentario: 'Grandioso!',
         fotoPerfil: null,
     }
 
-    ]
+    ],
 
     
 }
