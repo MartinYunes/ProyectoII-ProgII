@@ -14,12 +14,7 @@ let datos = {
         descripcion: 'El Tesla Model S es un sedán eléctrico de lujo que ofrece un rendimiento excepcional y una autonomía impresionante. Es uno de los vehículos eléctricos más populares del mercado.',
         fechaPub: '10/04/2023',
         id: 1,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Muy eficiente',
-            fotoPerfil: null,
-    
-        }]
+
 
     },
     {
@@ -28,12 +23,7 @@ let datos = {
         descripcion: 'El Ford Mustang es un icónico auto deportivo estadounidense que ofrece un rendimiento emocionante, un estilo clásico y una amplia gama de opciones de personalización.',
         fechaPub: '10/04/2023',
         id: 2,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Cuantos kilometros lleva?',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Lambroghini Aventador',
@@ -41,12 +31,7 @@ let datos = {
         descripcion: 'El Lamborghini Aventador es un súper deportivo italiano que ofrece un rendimiento de clase mundial, un diseño futurista y un precio exorbitante.',
         fechaPub: '10/04/2023',
         id: 3,
-        comentarios: [ {
-            userName: 'MartinMateo',
-            comentario: 'Veloz!',
-            fotoPerfil: null,
-    
-        }]
+        
     },
     {
         modeloAuto: 'Chevrolet Camaro',
@@ -138,9 +123,25 @@ let datos = {
             fotoPerfil: null,
     
         }]
+    }],
+    comentarios: [ {
+        userName: 'MartinMateo',
+        comentario: 'Muy eficiente',
+        fotoPerfil: 'stylesheets/images/users/perfil1.webp',
+
+    },{
+        userName: 'MartinMateo',
+        comentario: 'Cuantos kilometros lleva?',
+        fotoPerfil: null, 
+    },{
+        userName: 'MartinMateo',
+        comentario: 'Veloz!',
+        fotoPerfil: null,
     }
 
-    ],  
+    ]
+
+    
 }
 
 module.exports = datos
