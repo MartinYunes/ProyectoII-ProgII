@@ -101,35 +101,35 @@ let datos = {
     },{
         userName: 'JuanRoman10',
         comentario: 'Veloz!',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil3.jpeg',
     },{
         userName: 'Sebastiann_',
         comentario: 'Good car!',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil4.avif',
     },{
         userName: 'Sofia',
         comentario: 'Se puede pagar en cuotas?',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil5.jpeg',
     },{
         userName: 'Julieta',
         comentario: 'No me sirve',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil6.webp',
     },{
         userName: 'Vero',
         comentario: 'Muy caro',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil7.jpeg',
     },{
-        userName: 'Ale',
+        userName: 'Dieguito',
         comentario: 'Fachero',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil8.jpeg',
     },{
-        userName: 'Tomaseche',
+        userName: 'OmarEidel123',
         comentario: 'Buen estilo',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil9.jpeg',
     },{
-        userName: 'Brian',
+        userName: 'German',
         comentario: 'Grandioso!',
-        fotoPerfil: null,
+        fotoPerfil: '/images/users/perfil10.jpeg',
     }
 
     ],
