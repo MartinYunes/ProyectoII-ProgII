@@ -101,7 +101,7 @@ let datos = {
     },{
         userName: 'JuanRoman10',
         comentario: 'Veloz!',
-        fotoPerfil: '/images/users/perfil3.jpeg',
+        fotoPerfil: '/images/users/perfil3.png',
     },{
         userName: 'Sebastiann_',
         comentario: 'Good car!',
