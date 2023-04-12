@@ -1,3 +1,5 @@
+const datos = require("../data/data")
+
 var userController = {
     login: function(req, res){
         res.render('login')
@@ -8,7 +10,10 @@ var userController = {
     },
 
     profile: function(req, res){
-        res.render('profile')
+        res.render('profile', {
+            usuario:datos.usuario,
+            productos:datos.productos,
+        })
     },
 
     edit: function(req, res){
