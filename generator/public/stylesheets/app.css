@@ -68,18 +68,22 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--dark-blue);
 }
+
+
 
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  width: 70%
 }
 
 .main-header_credit-link {
   font-size: 1.5em;
   margin-top: 20px;
   text-align: center;
+  color: #ffffff;
 }
 
 .search-form {
@@ -130,6 +134,7 @@ hr {
 .left-navbar,
 .right-navbar {
   font-size: 1.5em;
+  color: #ffffff;
 }
 
 .logout{
