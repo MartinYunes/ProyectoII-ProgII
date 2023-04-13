@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<!-- Include Head -->
 
 <%- include('./partials/head') %>
 
@@ -16,10 +13,22 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá van los resultados de búsqueda. <br>
-			Eliminen estás líneas y cosntruyan la página de resultados de búsqueda. <br>
-			////////////////
-			</h2>
+			<% for (let i=0; i<4; i++) {%>
+				<div class="col-12 col-sm-6 col-lg-3">
+					
+					<section class="product-box">
+						<a href="/product">
+							<figure class="product-box_image">
+								<img class= 'img-ind' src=<%=list[i].imagen%>>
+							</figure>
+							<article class="product-box_data">
+								<h2><%=list[i].modeloAuto%></h2>
+								<p><%=list[i].descripcion%></p>
+							</article>
+						</a>
+					</section>
+				</div>
+			<% } %>
 
 
 	<!-- footer -->
