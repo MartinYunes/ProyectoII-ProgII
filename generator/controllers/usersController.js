@@ -17,7 +17,9 @@ var userController = {
     },
 
     edit: function(req, res){
-        res.render('profile-edit')
+        res.render('profile-edit', {
+            usuario:datos.usuario,
+        })
     },
 }
 
