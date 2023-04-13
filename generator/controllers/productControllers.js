@@ -13,11 +13,7 @@ let productController = {
             infoUsuario: datos.usuario
         })
     },
-    edit: function(req, res){
-        return res.render('product-add', {
-            infoUsuario: datos.usuario
-        })
-    },
+   
 
 }
 
