@@ -196,6 +196,11 @@ hr {
   border-bottom: 1px solid var(--light-gray);
 }
 
+.fotoAuto{
+  width: 260px;
+  height: 170px;
+}
+
 .product-box_data {
   padding: 15px;
   position: relative;
