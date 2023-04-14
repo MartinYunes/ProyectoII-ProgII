@@ -76,7 +76,7 @@ insert into comentarios values(default, 'no me gusta el interior', default, defa
 insert into comentarios values(default, 'el mejor auto en el que anduve!', default, default, 1, 2);
 insert into comentarios values(default, 'gasto de plata', default, default, 1, 7);
 insert into comentarios values(default, 'no me parecio tan buena', default, default, 1, 8);
-insert into comentarios values(default, 'me ecanta el interior', default, default, 1, 7);
+insert into comentarios values(default, 'me encanta el interior', default, default, 1, 7);
 insert into comentarios values(default, 'anda re rapido', default, default, 2, 4);
 insert into comentarios values(default, 'el volante es muy chico', default, default, 3, 5);
 insert into comentarios values(default, 'pocos frenos', default, default, 2, 7);
