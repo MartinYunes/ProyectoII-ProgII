@@ -4,7 +4,7 @@ let datos = {
         pw: 'YunesSilveri',
         email: 'MMMS@gmail.com',
         dni: '44900630',
-        fotoPerfil: '',
+        fotoPerfil: '/images/i.png',
 
 
     },
