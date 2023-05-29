@@ -12,7 +12,10 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+<<<<<<< HEAD
     "mysql2": "^3.3.3",
+=======
+>>>>>>> e87996205233ece67c52daa69a4dd93ce6c4dee7
     "sequelize": "^6.31.1"
   }
 }
