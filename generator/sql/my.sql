@@ -1,6 +1,6 @@
-create schema proyectoprogII;
+create schema proyectoprogI;
 
-use proyectoprogII;
+use proyectoprogI;
 
 create table usuarios (
 	id int unsigned primary key auto_increment,
