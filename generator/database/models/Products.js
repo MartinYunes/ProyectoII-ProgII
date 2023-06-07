@@ -9,14 +9,29 @@ module.exports = function(sequelize, DataTypes){
             type : dataTypes.INTEGER
         }
         
-        ,name: {
+        ,id_usuario: {
             type: dataTypes.STRING
-        }
+        },
+
+        nombre_producto: {
+            type: dataTypes.STRING
+
+        },
+        descripcio_producto: {
+            type: dataTypes.STRING
+        },
+
+        createdAt:{
+            type: dataTypes.DATE
+        },
+        updatedAt:{
+            type: dataTypes.DATE
+        },
     }
     let config = {
-        tableName: 'productos',
+        //tableName: 'productos',
         timestamps: false,
-        underscored: true
+        //underscored: true  
     }
 
 

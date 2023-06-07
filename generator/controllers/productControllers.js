@@ -1,4 +1,6 @@
 let datos = require('../data/data')
+let db = require('../database/models');
+
 
 let productController = {
     detail: function(req, res){
@@ -13,6 +15,15 @@ let productController = {
             infoUsuario: datos.usuario
         })
     },
+    index: function (req,res) {
+        db.Producto.findAll()
+            .then(function(data){
+
+            })
+            .catch(function(error){
+                
+            })
+    }
    
 
 }
