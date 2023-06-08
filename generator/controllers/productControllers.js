@@ -16,7 +16,7 @@ let productController = {
         })
     },
     index: function (req,res) {
-        db.Producto.findAll()
+        db.Producto.findByPk()
             .then(function(data){
 
             })
