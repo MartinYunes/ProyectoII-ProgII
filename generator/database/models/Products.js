@@ -6,26 +6,26 @@ module.exports = function(sequelize, DataTypes){
 
             autoIncrement : true, 
             primaryKey : true,
-            type : dataTypes.INTEGER
+            type : DataTypes.INTEGER
         }
         
         ,id_usuario: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
 
         nombre_producto: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
 
         },
         descripcio_producto: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
 
         createdAt:{
-            type: dataTypes.DATE
+            type: DataTypes.DATE
         },
         updatedAt:{
-            type: dataTypes.DATE
+            type: DataTypes.DATE
         },
     }
     let config = {
