@@ -7,9 +7,9 @@ module.exports = function(sequelize, DataTypes){
             autoIncrement : true, 
             primaryKey : true,
             type : DataTypes.INTEGER
-        },
+        }
         
-        id_usuario: {
+        ,id_usuario: {
             type: DataTypes.STRING
         },
 
@@ -35,6 +35,18 @@ module.exports = function(sequelize, DataTypes){
 
 
 let producto = sequelize.define(alias, cols, config);
+
+producto.associate = function(models){
+    producto.belongsTo(models.Usuario, {
+        as: 'usuario',
+        foreignKey: 'id_usuario'
+    }),
+    producto.hasMany(models.Comentario, {
+        as: 'comentarios',
+        foreignKey: "post_id"
+    })
+} 
+
 return producto
 
 
