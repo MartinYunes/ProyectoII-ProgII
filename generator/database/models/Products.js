@@ -7,9 +7,9 @@ module.exports = function(sequelize, DataTypes){
             autoIncrement : true, 
             primaryKey : true,
             type : DataTypes.INTEGER
-        }
+        },
         
-        ,id_usuario: {
+        id_usuario: {
             type: DataTypes.STRING
         },
 
@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING
 
         },
-        descripcio_producto: {
+        descripcion_producto: {
             type: DataTypes.STRING
         },
 
@@ -31,7 +31,6 @@ module.exports = function(sequelize, DataTypes){
     let config = {
         tableName: 'productos',
         timestamps: false,
-        underscored: true  
     }
 
 
