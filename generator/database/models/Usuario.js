@@ -30,7 +30,7 @@ module.exports = function (sequelize, dataTypes) {
     };
     let config = { 
         tableName: 'usuarios',
-        timestamps: false,
+        timestamps: true
     };
 
     let usuarios = sequelize.define(alias, cols, config);
@@ -42,7 +42,7 @@ module.exports = function (sequelize, dataTypes) {
         })
         usuarios.hasMany(models.Comentario, {
             as: "comentarios", 
-            foreignKey: "id_usuario" //id_usuario es la fk que esta definida en Comentarios pero vinculando mi tabla 
+            foreignKey: "user_id" //id_usuario es la fk que esta definida en Comentarios pero vinculando mi tabla 
         })
     }
 
