@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes){
         updatedAt:{
             type: DataTypes.DATE
         },
-        imagen:{
+        imagenes:{
             type: DataTypes.STRING
         }
     }

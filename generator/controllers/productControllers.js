@@ -18,6 +18,9 @@ let productController = {
                 res.send(resultado)
                 return res.render('product', {productos:resultado})
             })
+            .catch(function (error) {
+                console.log(error)
+              });
 
         
     },
@@ -27,16 +30,7 @@ let productController = {
             infoUsuario: datos.usuario
         })
     },
-    index: function (req,res) {
-        db.Producto.findByPk()
-            .then(function(data){
-
-            })
-            .catch(function(error){
-                
-            })
-    }
-   
+    
 
 }
 
