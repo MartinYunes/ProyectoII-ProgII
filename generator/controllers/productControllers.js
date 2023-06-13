@@ -15,7 +15,7 @@ let productController = {
 
         producto.findByPk(id, rel)
             .then(function(resultado){
-                res.send(resultado)
+                //res.send(resultado)
                 return res.render('product', {producto:resultado})
             })
             .catch(function (error) {
