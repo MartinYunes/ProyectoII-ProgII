@@ -1,6 +1,8 @@
 let datos = require('../data/data')
 let db = require('../database/models');
 const producto = db.Producto
+let op = db.Sequelize.Op
+
 
 let resultsController = {
     searchResults: function(req, res) {
@@ -9,8 +11,8 @@ let resultsController = {
 
         producto.findAll({
             where: [
-                //{title: busqueda}
-                {title: {[op.like]: `%${busqueda}%`}}
+                 {nombre_producto: busqueda}
+                //{title: {[op.like]: `%${busqueda}%`}}
             ]
         })
         .then(function (result) {
@@ -19,7 +21,7 @@ let resultsController = {
         .catch(function (error) {
             console.log(error);
         })
-        res.render('search-results', {list:datos.productos});
+        //res.render('search-results', {list:datos.productos});
     }
 }
 module.exports = resultsController

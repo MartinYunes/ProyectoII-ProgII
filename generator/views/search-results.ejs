@@ -13,17 +13,17 @@
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% for (let i=0; i<4; i++) {%>
+			<% for (let i=0; i<list.length; i++) {%>
 				<div class="col-12 col-sm-6 col-lg-3">
 					
 					<section class="product-box">
 						<a href="/product">
 							<figure class="product-box_image">
-								<img class= 'img-ind' src=<%=list[i].imagen%>>
+								<img class= 'img-ind' src=<%=list[i].imagenes%>>
 							</figure>
 							<article class="product-box_data">
-								<h2><%=list[i].modeloAuto%></h2>
-								<p><%=list[i].descripcion%></p>
+								<h2><%=list[i].nombre_producto%></h2>
+								<p><%=list[i].descripcion_producto%></p>
 							</article>
 						</a>
 					</section>

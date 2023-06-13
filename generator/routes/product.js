@@ -7,5 +7,8 @@ router.get('/add', productController.add);
 
 // detalle del producto
 router.get('/id/:id', productController.detail);
+
+
+
   
 module.exports = router;
