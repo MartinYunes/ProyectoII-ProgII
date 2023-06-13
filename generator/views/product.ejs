@@ -21,17 +21,17 @@
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src=<%= producto.imagenes %> alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						<%= products[0].descripcion %></p>
+						<%= producto.descripcion_producto %></p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<% for( let i = 0; i < comments.length; i++ ) { %>
+						<% for( let i = 0; i < producto.comentarios.length; i++ ) { %>
 							<article>
-									<img src=<%= comments[i].fotoPerfil %> alt="">
+									<img src=<%= producto.comentarios.foto_perfil %> alt="">
 								<div class="data">
 									<p class="user">
-									<strong> <a href="profile.html"><%= comments[i].userName %>: </a> </strong>
-									<%= comments[i].comentario %></p>
+									<strong> <a href="profile.html"><%= producto.comentarios.user_id %>: </a> </strong>
+									<%= producto.comentarios.texto %></p>
 								</div>
 							</article>
 						<% } %>
