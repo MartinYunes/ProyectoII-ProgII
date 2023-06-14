@@ -1,7 +1,10 @@
-use proyectoprogI;
+CREATE SCHEMA proyectoprogII;
+
+use proyectoprogII;
 
 create table usuarios (
 	id int unsigned primary key auto_increment,
+    usuario VARCHAR(100) UNIQUE NOT NULL,
     email varchar(500) unique not null,
     contraseña varchar(500) not null,
     foto_perfil varchar(500) not null,
@@ -12,16 +15,18 @@ create table usuarios (
     
 );
 
+
+
 INSERT INTO usuarios 
-VALUES(default, 'lebron@udesa.edu.ar', 'lecap', 'fotoperfil1', '2003-03-03', 45489557, default, default);
+VALUES(default, 'Ma23', 'lebron@udesa.edu.ar', 'lecap', 'fotoperfil1', '2003-03-03', 45489557, default, default);
 INSERT INTO usuarios
-VALUES(default, 'stephen@udesa.edu.ar', 'splash', 'fotoperfil2', '2003-03-03', 42415374, default, default);
+VALUES(default, 'Ma24', 'stephen@udesa.edu.ar', 'splash', 'fotoperfil2', '2003-03-03', 42415374, default, default);
 INSERT INTO usuarios 
-VALUES(default, 'mateo@udesa.edu.ar', 'mate', 'fotoperfil3', '2003-03-03', 42415543, default, default);
+VALUES(default, 'Ma25', 'mateo@udesa.edu.ar', 'mate', 'fotoperfil3', '2003-03-03', 42415543, default, default);
 INSERT INTO usuarios
-VALUES(default, 'martin@udesa.edu.ar', 'mors', 'fotoperfil4', '2003-03-03', 43415398, default, default);
+VALUES(default, 'Ma26', 'martin@udesa.edu.ar', 'mors', 'fotoperfil4', '2003-03-03', 43415398, default, default);
 INSERT INTO usuarios 
-VALUES(default, 'marcelo@udesa.edu.ar', 'conocelo', 'fotoperfil5', '2003-03-03', 43514632, default, default);
+VALUES(default, 'Ma27', 'marcelo@udesa.edu.ar', 'conocelo', 'fotoperfil5', '2003-03-03', 43514632, default, default);
 
 
 create table productos(
@@ -31,8 +36,10 @@ create table productos(
     descripcion_producto varchar(500) not null,
     createdAt timestamp default current_timestamp,
 	updatedAt timestamp default current_timestamp on update current_timestamp,
+    imagenes VARCHAR(500) NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
+
 
 INSERT INTO productos 
 VALUES(default, 1, 'Tesla Model S', 'El Tesla Model S es un sedán eléctrico de lujo que ofrece un rendimiento excepcional y una autonomía impresionante. Es uno de los vehículos eléctricos más populares del mercado.', default, default, '/images/products/tesla.jpeg');
@@ -55,48 +62,6 @@ VALUES(default, 2, 'Dodge challenger', 'El Dodge Challenger es un auto deportivo
 INSERT INTO productos 
 VALUES(default, 2, 'Toyota supra', 'El Toyota Supra es un deportivo japonés que ofrece un rendimiento emocionante, un diseño elegante y una historia icónica en el mundo de los autos deportivos.', default, default, '/images/products/supra.jpeg');
 
-ALTER TABLE productos
-ADD imagenes TEXT NOT NULL;
-
-UPDATE productos
-SET imagen = '/images/products/tesla.jpeg'
-WHERE id = 1;
-
-UPDATE productos
-SET imagen = '/images/products/ford-mustang.webp'
-WHERE id = 2;
-
-UPDATE productos
-SET imagen = '/images/products/aventador.webp'
-WHERE id = 3;
-
-UPDATE productos
-SET imagen = '/images/products/camaro.webp'
-WHERE id = 4;
-
-UPDATE productos
-SET imagen = '/images/products/bmwm5.jpeg'
-WHERE id = 5;
-
-UPDATE productos
-SET imagen = '/images/products/r8.jpeg'
-WHERE id = 6;
-
-UPDATE productos
-SET imagen = '/images/products/porsche911.jpeg'
-WHERE id = 7;
-
-UPDATE productos
-SET imagen = '/images/products/amg-gtr.jpeg'
-WHERE id = 8;
-
-UPDATE productos
-SET imagen = '/images/products/dodge_challenger.jpeg'
-WHERE id = 9;
-
-UPDATE productos
-SET imagen = '/images/products/supra.jpeg'
-WHERE id = 10;
 
 
 
@@ -105,12 +70,12 @@ WHERE id = 10;
 create table comentarios (
 	id int unsigned primary key auto_increment,
     post_id int unsigned,
-    user_id int unsigned,
+    id_usuario int unsigned,
     texto varchar (500) not null,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (post_id) REFERENCES productos(id),
-    FOREIGN KEY (user_id) REFERENCES usuarios(id)
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 
 );
 INSERT INTO comentarios
@@ -135,3 +100,5 @@ INSERT INTO comentarios
 values(default, 4, 2, 'me parecio rapida', default, default);
 INSERT INTO comentarios 
 values(default,  5, 2, 'es lenta', default, default);
+INSERT INTO comentarios 
+values(default,  4, 5, 'poco espacio dentro del auto', default, default);

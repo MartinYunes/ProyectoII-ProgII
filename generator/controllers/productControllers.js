@@ -10,7 +10,9 @@ let productController = {
 
         let id = req.params.id;
         let rel = {
-            include: [{association: 'comentarios'}]
+            include: [{
+                association: 'comentarios', include:[{association:'usuario'}]
+            }]
         }
 
         producto.findByPk(id, rel)

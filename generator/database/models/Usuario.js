@@ -6,6 +6,9 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true, 
             type: dataTypes.INTEGER, 
         },
+        usuario: {
+            type: dataTypes.STRING
+        },
         email: {
             type: dataTypes.STRING
         }, 
@@ -42,7 +45,7 @@ module.exports = function (sequelize, dataTypes) {
         })
         usuarios.hasMany(models.Comentario, {
             as: "comentarios", 
-            foreignKey: "user_id" //id_usuario es la fk que esta definida en Comentarios pero vinculando mi tabla 
+            foreignKey: "id_usuario" //id_usuario es la fk que esta definida en Comentarios pero vinculando mi tabla 
         })
     }
 
