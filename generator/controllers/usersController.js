@@ -1,7 +1,8 @@
 const datos = require("../data/data")
 const data = require('../database/models');
+const bcrypt = require('bcryptjs')
 const usuarios = data.Usuario
-
+ 
 
 
 var userController = {
