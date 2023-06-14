@@ -9,7 +9,7 @@ module.exports = function(sequelize, dataTypes){
         post_id:{
             type: dataTypes.INTEGER
         } ,
-        user_id:{
+        id_usuario:{
             type: dataTypes.INTEGER
         },
         texto: {

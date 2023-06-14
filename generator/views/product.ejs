@@ -27,11 +27,11 @@
 					<section class="comments">
 						<% for( let i = 0; i < producto.comentarios.length; i++ ) { %>
 							<article>
-									<img src=<%= producto.comentarios.foto_perfil %> alt="">
+									<img src=<%= producto.comentarios[i].foto_perfil %> alt="">
 								<div class="data">
 									<p class="user">
-									<strong> <a href="profile.html"><%= producto.comentarios.id_ususario %>: </a> </strong>
-									<%= producto.comentarios.texto %></p>
+									<strong> <a href="profile.html"><%= producto.comentarios[i].id_ususario %>: </a> </strong>
+									<%= producto.comentarios[i].texto %></p>
 								</div>
 							</article>
 						<% } %>
