@@ -32,7 +32,19 @@ let productController = {
             infoUsuario: datos.usuario
         })
     },
-    
+
+    comentarios: (req,res)=> {
+        let datos = req.params.id;
+        let informacion = req.body;
+      
+        console.log(informacion) // para ver que se cargue el comentario correctamente
+        db.Comentario.create(informacion)
+          .then((devolucion) => {
+            return res.render("product")
+          }).catch((error) => {
+            console.log(error)
+          })  
+      }
 }
 
 module.exports = productController;

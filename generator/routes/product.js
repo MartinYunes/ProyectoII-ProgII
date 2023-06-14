@@ -9,6 +9,7 @@ router.get('/add', productController.add);
 router.get('/id/:id', productController.detail);
 
 
-
+//Armamos el metodo por el cual guardamos el comentario
+router.post('/comentarios',productController.comentarios);
   
 module.exports = router;

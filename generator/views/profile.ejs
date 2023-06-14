@@ -13,11 +13,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="<%- usuario.fotoPerfil %>" alt="foto de perfil" class="foto-perfil">
+				<img src="<%- usuario.foto_perfil %>" alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= usuario.userName %> 
+					<h1 class="main-title"><%= usuario.usuario %> 
 						<a href="/users/edit-profile">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -26,7 +26,7 @@
 				</div>
 				<div>
 					<ul class="">
-						<li>Email: <%= usuario.email %></li>
+						<li>Email: <%= locals.usuario.email %></li>
 						<li>8 productos</li>
 						<li>200 seguidores</li>
 						<li>300 comentarios</li>
@@ -50,10 +50,10 @@
 					<section class="product-box">
 						<a href="/product">
 							<figure class="product-box_image">
-								<img class= 'img-ind' src=<%=productos[i].imagen%>>
+								<img class= 'img-ind' src=<% %>>
 							</figure>
 							<article class="product-box_data">
-								<h2><%=productos[i].modeloAuto%></h2>
+								<h2><%= %></h2>
 								<p>10 usuarios consultaron por tu producto</p>
 							</article>
 						</a>
