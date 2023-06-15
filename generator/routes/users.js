@@ -4,7 +4,7 @@ let userController = require('../controllers/usersController')
 
 router.get('/login', userController.login )
 
-router.get('/login', userController.loginPost )
+router.post('/login', userController.loginPost)
 
 
 router.get('/register', userController.register)

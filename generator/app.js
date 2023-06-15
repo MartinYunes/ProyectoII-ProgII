@@ -24,6 +24,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Configuracion de locals
+
+
+
 /* configuracion para que la sesion se inicie */
 app.use(session({
   secret:'myApp',

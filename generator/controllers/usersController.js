@@ -54,7 +54,7 @@ var userController = {
                 let claveCorrecta = bcrypt.compareSync(pass, result.contraseña)
 
                 if (claveCorrecta) {
-                    res.redirect('/users/profile')
+                    return res.redirect('/')
                 } else {
                     return res.send('mail bien y password mal')
                 }
