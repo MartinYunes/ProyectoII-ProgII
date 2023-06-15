@@ -1,6 +1,6 @@
 const datos = require("../data/data")
 const data = require('../database/models');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 const usuarios = data.Usuario
  
 
@@ -13,7 +13,7 @@ var userController = {
         let userStore = {
             usuario: info.usuario,
             email: info.email,
-            contraseña: info.contraseña,
+            contraseña: bcrypt.hashSync(info.contraseña, 10),
             foto_perfil: info.foto_perfil,
             fecha_nacimiento: info.fecha_nacimiento,
             DNI: info.DNI
@@ -40,7 +40,34 @@ var userController = {
 
 
     loginPost: function(req, res){
-        res.redirect('/users/profile')
+
+        let emailBuscado = req.body.email
+        let pass = req.body.contraseña
+
+        let filtrado = {
+            where: [{email: emailBuscado}] //para que el campo email de mi modelo coincida con el email del usuario
+        }
+
+        usuarios.findOne(filtrado)
+        .then(function (result) {
+            if (result) {
+                let claveCorrecta = bcrypt.compareSync(pass, result.contraseña)
+
+                if (claveCorrecta) {
+                    res.redirect('/users/profile')
+                } else {
+                    return res.send('mail bien y password mal')
+                }
+            } else {
+                return res.send('mail mal')
+            }
+            
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+
+        
     },
     
 

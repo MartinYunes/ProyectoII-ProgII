@@ -44,6 +44,23 @@ let productController = {
           }).catch((error) => {
             console.log(error)
           })  
+      },
+
+      store: function (req,res) {
+        let info = req.body;
+        console.log(info);
+
+        db.producto.create(info)
+
+        .then((devolucion) => {
+            return res.redirect('/')
+          })
+        .catch(function (error) {
+            console.log(error);
+        })
+
+        
+        
       }
 }
 
