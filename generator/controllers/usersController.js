@@ -8,6 +8,9 @@ const usuarios = data.Usuario
 var userController = {
 
     store: function(req,res) {
+        let info = req.body /* trae toda la info del formulafrio */
+        console.log(info);
+        
         return res.redirect('/users/login')
     },
 
