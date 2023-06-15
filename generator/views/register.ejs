@@ -18,12 +18,13 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<form action="/users/register" method="POST">
-				<label> EMAIL</label><input type="email" value="">
-				<label> NOMBRE DE USUARIO</label><input type="text" value="">
-				<label> CONTRASEÑA:</label><input type="password" value="">
-				<label> DNI</label><input type="number" value="">
-				<label> FOTO PERFIL</label><input type="text" value="">
+			<form action="/users/register" method="post">
+				<label> EMAIL</label><input type="email" value="" name="email">
+				<label> NOMBRE DE USUARIO</label><input type="text" value="" name="usuario">
+				<label> CONTRASEÑA:</label><input type="password" value="" name="contraseña">
+				<label> FECHA DE NACIMIENTO</label><input type="number" value="" name="fecha_nacimiento">
+				<label> DNI</label><input type="number" value="" name="DNI">
+				<label> FOTO PERFIL</label><input type="text" value="" name="foto_perfil">
 				
 				<button type="submit"> REGISTRARME </button> 
 			</form>
