@@ -10,10 +10,14 @@ let resultsController = {
         let busqueda = req.query.search
 
         producto.findAll({
-            where: [
-                 {nombre_producto: busqueda}
-                //{title: {[op.like]: `%${busqueda}%`}}
-            ]
+            where:{
+                [op.or]:[
+                {nombre_producto: { [op.like]: "%" + busqueda + "%" }},
+                {descripcion_producto: { [op.like]: "%" + busqueda + "%" }},
+                ]},
+                order: [
+                    ['createdAt', 'DESC']]
+            
         })
         .then(function (result) {
             return res.render('search-results', {list: result})
