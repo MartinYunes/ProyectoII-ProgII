@@ -11,7 +11,9 @@ router.post('/add', productController.store);
 // detalle del producto
 router.get('/id/:id', productController.detail);
 
+router.get('/editar/id/:id',productController.editar);  
 
+router.post('/editar/id/:id',productController.saveEdit);
 //Armamos el metodo por el cual guardamos el comentario
 router.post('/comentarios',productController.comentarios);
   

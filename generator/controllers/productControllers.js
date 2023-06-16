@@ -33,6 +33,35 @@ let productController = {
         })
     },
 
+    editar: (req,res) => {
+      let id= req.params.id;
+      producto.findByPk(id)
+      .then((devolucion) => {
+        console.log(devolucion);
+        return res.render("edit-product", {producto:devolucion})
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    },
+
+    saveEdit: (req,res) =>{
+      let id= req.params.id;
+      let data= req.body;
+      producto.update(data, {
+        where: [
+          {id:id}
+        ]
+      })
+      .then((devolucion) => {
+        return res.redirect("/product/id/" + id)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      
+    },  
+
     comentarios: (req,res)=> {
         let datos = req.params.id;
         let informacion = req.body;
