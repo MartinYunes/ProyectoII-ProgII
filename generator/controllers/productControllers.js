@@ -62,6 +62,22 @@ let productController = {
       
     },  
 
+    eliminar: (req,res) =>{
+      let id_destructor= req.body.id
+      producto.destroy({
+        where: [
+          {id:id_destructor}
+        ]
+      })
+      .then((devolucion) => {
+        return res.redirect("/")
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      
+    },
+
     comentarios: (req,res)=> {
         let datos = req.params.id;
         let informacion = req.body;
