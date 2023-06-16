@@ -23,22 +23,27 @@
 				<h2 class="products-title">Editar mi perfil</h2>
 			</div>
 
-			<form action="/users/profile" method="GET">
+			<form action="/users/profile/id/<%= locals.usuario.id %>" method="POST">
 
 				<div>
 					<label> Foto de perfil:</label>
-					<input type="file" class="seleccionadorArchivos" id="imagen" name="imagen">
+					<input type="file" class="seleccionadorArchivos" id="imagen" name="foto_perfil">
 				</div>
 
 				<div>
 					<label> Usuario:</label>
-					 <input type="text" name="user" value="">
+					 <input type="text" name="usuario" value="">
 				</div>
 
 				<div>
 					<label> Contraseña:</label> 
-					<input type="password" name="pass" value="">
+					<input type="password" name="contraseña" value="">
 				</div>
+			</div>
+			<% if (locals.errors) { %>
+				<p class="errorUsuario"><%= locals.errors.message %></p>
+			<% } %>
+			<div>
 				<div>
 					<input class="enviar" type="submit" value="Enviar">
 				</div>
