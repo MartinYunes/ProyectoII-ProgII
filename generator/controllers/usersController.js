@@ -54,7 +54,7 @@ var userController = {
 
                 if (claveCorrecta) {
                     //poner un usuario en sesion
-                    req.session.user = result.dataValues;  //Datavalues trae solo los resultados de la tabla, lo estoy guardando en session en una propiedad llamada user
+                    req.session.usuario = result.dataValues;  //Datavalues trae solo los resultados de la tabla, lo estoy guardando en session en una propiedad llamada user
 
                     //si tildo recordarme, creamos la cookie
                     if (req.body.remember != undefined) {
@@ -112,6 +112,16 @@ var userController = {
             usuario:datos.usuario,
         })
     },
+
+    destroy: (req,res) => {
+
+        req.session.usuario=null
+        res.clearCookie('userId')
+
+        return res.redirect("/users/login")
+    }
 }
+
+
 
 module.exports = userController

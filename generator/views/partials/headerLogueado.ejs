@@ -35,12 +35,12 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/users/profile/id/<%= locals.user.id %>">   
-						<li> <%= locals.user.email %></li> <i class="fas fa-user"></i> <!-- /no me funciona con el tag ejs. -->
+					<li><a href="/users/profile/id/<%= locals.usuario.id %>">   
+						<li> <%= locals.usuario.email %></li> <i class="fas fa-user"></i> <!-- /no me funciona con el tag ejs. -->
 						</a>
 					</li>
 					<li>
-						<form action="/users/login" method="GET">  <!-- /corregir esto -->
+						<form action="/users/delete" method="post">  <!-- /corregir esto -->
 							<button class="logout" type="submit">
 								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 							</button>

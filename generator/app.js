@@ -14,6 +14,13 @@ var searchresultsRouter = require('./routes/search-results')
 
 var app = express();
 
+/* configuracion para que la sesion se inicie */
+app.use(session({
+  secret:'MMmotors',
+  resave: false,
+  saveUninitialized: true
+}));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -24,12 +31,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/* configuracion para que la sesion se inicie */
-app.use(session({
-  secret:'MMmotors',
-  resave: false,
-  saveUninitialized: true
-}));
 
 //Configuracion de locals
  app.use(function (req,res,next) {
@@ -43,6 +44,23 @@ app.use(session({
 
  });
 
+app.use(function(req,res,next){
+  if (req.cookies.userId != undefined && req.session.usuario == undefined) {
+    let idUsuarioEnCookie = req.cookies.userId;
+    db.Usuario.findByPk(idUsuarioEnCookie)
+    .then((usuario) =>{
+      req.session.usuario = usuario.dataValues;
+      res.locals.usuario = usuario.dataValues
+
+      return next();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  } else {
+    return next()
+  }
+})
 
 
 

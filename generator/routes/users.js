@@ -11,9 +11,10 @@ router.get('/register', userController.register)
 
 router.post('/register', userController.store)
 
-router.get('/profile/id/:id',userController.profile )
+router.get('/users/profile/id/:id',userController.profile )
 
 router.get('/edit-profile', userController.edit)
 
+router.post('/delete', userController.destroy)
 
 module.exports = router;
