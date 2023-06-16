@@ -13,11 +13,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src="<%=  %>" alt="foto de perfil" class="foto-perfil">
+				<img src="<%=  %>" alt="foto de perfil" class="foto-perfil"> <!-- poner aca foto perfil de usuario -->
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"><%= locals.usuario.usuario %> 
+					<h1 class="main-title"><%= datosUsuario.usuario %> 
 						<a href="/users/edit-profile">
 							<i class="fas fa-cog"></i>
 						</a>
@@ -26,10 +26,9 @@
 				</div>
 				<div>
 					<ul class="">
-						<li>Email: <%= locals.usuario.email %></li>
+						<li>Email: <%= datosUsuario.email %></li>
 						<li>8 productos</li>
-						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li>Comentarios: <%= datosUsuario.email %></li>
 					</ul>
 				</div>
 			</div>

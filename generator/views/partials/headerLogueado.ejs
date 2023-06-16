@@ -35,8 +35,8 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/users/profile">   
-						<li> <%=  %></li> <i class="fas fa-user"></i> <!-- /no me funciona con el tag ejs. -->
+					<li><a href="/users/profile/id/<%= locals.user.id %>">   
+						<li> <%= locals.user.email %></li> <i class="fas fa-user"></i> <!-- /no me funciona con el tag ejs. -->
 						</a>
 					</li>
 					<li>

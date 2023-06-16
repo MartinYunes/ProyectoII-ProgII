@@ -84,10 +84,26 @@ var userController = {
     },
 
     profile: function(req, res){
-        res.render('profile', {
-            usuario:datos.usuario,
-            productos:datos.productos,
+        let id = req.params.id
+                            
+        //creo realcion
+        let rel2=  {
+            include: [{association: "comentarios"},{association: "productos"}], 
+            order: [['createdAt', 'ASC'] ]} 
+
+    //filtro por PK
+    usuarios.findByPk(id,rel2)
+        .then(function(result){
+            console.log(result)
+        
+            return res.render('profile', {
+                datosUsuario: result})
+
         })
+        .catch( function(error){
+            console.log(error);
+        })   
+
     },
 
     edit: function(req, res){
