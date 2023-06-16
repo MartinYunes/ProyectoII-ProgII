@@ -81,13 +81,14 @@ let productController = {
         console.log(informacion);
       
         //console.log(informacion) // para ver que se cargue el comentario correctamente
+        console.log(datos)
         db.Comentario.create({
           id_usuario: req.session.usuario.id,
           post_id: datos,
           texto: informacion.texto,
         })
           .then((devolucion) => {
-            return res.redirect('/product/id/'+datos)
+            return res.redirect('/product/id/'+ datos)
           }).catch((error) => {
             console.log(error)
           })  
