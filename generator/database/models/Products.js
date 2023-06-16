@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes){
         }
         
         ,id_usuario: {
-            type: DataTypes.STRING
+            type: DataTypes.INTEGER
         },
 
         nombre_producto: {

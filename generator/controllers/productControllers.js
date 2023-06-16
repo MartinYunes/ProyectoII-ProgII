@@ -77,11 +77,17 @@ let productController = {
     comentarios: (req,res)=> {
         let datos = req.params.id;
         let informacion = req.body;
+
+        console.log(informacion);
       
-        console.log(informacion) // para ver que se cargue el comentario correctamente
-        db.Comentario.create(informacion)
+        //console.log(informacion) // para ver que se cargue el comentario correctamente
+        db.Comentario.create({
+          id_usuario: req.session.usuario.id,
+          post_id: datos,
+          texto: informacion.texto,
+        })
           .then((devolucion) => {
-            return res.render("product")
+            return res.redirect('/product/id/'+datos)
           }).catch((error) => {
             console.log(error)
           })  
