@@ -27,11 +27,7 @@ let productController = {
         
     },
 
-    add: function(req, res){
-        return res.render('product-add', {
-            infoUsuario: datos.usuario
-        })
-    },
+    
 
     editar: (req,res) => {
       let id= req.params.id;
@@ -90,21 +86,40 @@ let productController = {
             console.log(error)
           })  
     },
-    store: function (req,res) {
-      let info = req.body;
-      console.log(info);
 
-      db.producto.create(info)
-
-      .then((devolucion) => {
-          return res.redirect('/')
-        })
-      .catch(function (error) {
-          console.log(error);
+    add: function(req, res){
+      return res.render('product-add', {
+         
       })
-    }
+  },
+
+    
+      store: function(req,res) {
+        let info = req.body /* trae toda la info del formulafrio */
+
+        console.log(info);
+        
+        let userStore = {
+            nombre_producto: info.nombre_producto,
+            descripcion_producto: info.descripcion_producto,
+            imagenes: info.imagenes
+
+        }
+        
+        producto.create(userStore)
+        .then(function (result) {
+            return res.redirect('/');
+        })
+
+        .catch(function (error) {
+            console.log(error);
+        })
+
+        
+      }}
+    
 
       
-}
+
 
 module.exports = productController;
