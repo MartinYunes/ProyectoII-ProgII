@@ -34,7 +34,7 @@ var userController = {
     },
 
 
-    login: function(req, res){
+    login: function(req,res){
         res.render('login')
     },
 
@@ -43,7 +43,6 @@ var userController = {
 
         let emailBuscado = req.body.email
         let pass = req.body.contraseña
-
         let filtrado = {
             where: [{email: emailBuscado}] //para que el campo email de mi modelo coincida con el email del usuario
         }
@@ -64,10 +63,12 @@ var userController = {
 
                     return res.redirect('/') 
                 } else {
-                    return res.send('mail bien y password mal')
+                    errorLogin.message = 'password incorrecta'
+                    return res.render('login')
                 }
             } else {
-                return res.send('mail mal')
+                errorLogin.message = 'Email incorrecta'
+                    return res.render('login')
             }
             
         })

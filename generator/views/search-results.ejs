@@ -4,7 +4,11 @@
 
 <body>
 
-	<%- include('./partials/headerNoLogueado') %>
+	<% if (locals.user != null) {%>
+		<%- include('./partials/headerLogueado') %> 
+	<% } else {%>
+		<%- include("./partials/headerNoLogueado") %>
+	<% } %>
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
