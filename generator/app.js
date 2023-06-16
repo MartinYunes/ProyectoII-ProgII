@@ -24,16 +24,27 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Configuracion de locals
-
-
-
 /* configuracion para que la sesion se inicie */
 app.use(session({
-  secret:'myApp',
+  secret:'MMmotors',
   resave: false,
   saveUninitialized: true
 }));
+
+//Configuracion de locals
+ app.use(function (req,res,next) {
+
+  if (req.session.usuario != undefined) {
+    res.locals.usuario = req.session.usuario //si el usuario esta en sesion, me lo pasa a la variable locals. en locals puedo manipular la info en el ejs. 
+    //locals es la variable disponible para pasarle la informacion al ejs. la trae express.
+    return next()
+  }
+  return next()
+
+ });
+
+
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

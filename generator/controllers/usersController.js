@@ -50,11 +50,19 @@ var userController = {
 
         usuarios.findOne(filtrado)
         .then(function (result) {
-            if (result) {
+            if (result != null) {
                 let claveCorrecta = bcrypt.compareSync(pass, result.contraseña)
 
                 if (claveCorrecta) {
-                    return res.redirect('/')
+                    //poner un usuario en sesion
+                    req.session.user = result.dataValues;  //Datavalues trae solo los resultados de la tabla, lo estoy guardando en session en una propiedad llamada user
+
+                    //si tildo recordarme, creamos la cookie
+                    if (req.body.remember != undefined) {
+                        res.cookie('userID', result.id, {maxAge: 1000 * 60 * 15} )
+                    } 
+
+                    return res.redirect('/') 
                 } else {
                     return res.send('mail bien y password mal')
                 }
