@@ -95,9 +95,14 @@ let productController = {
     },
 
     add: function(req, res){
-      return res.render('product-add', {
-         
-      })
+      if (req.session.usuario != undefined) {
+        return res.render('product-add');
+
+      }else{
+        return res.redirect('/users/login')
+      }
+    
+      
   },
 
     
