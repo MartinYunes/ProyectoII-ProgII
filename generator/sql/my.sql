@@ -18,15 +18,15 @@ create table usuarios (
 
 
 INSERT INTO usuarios 
-VALUES(default, 'Ma23', 'lebron@udesa.edu.ar', 'lecap', 'fotoperfil1', '2003-03-03', 45489557, default, default);
+VALUES(default, 'Ma23', 'lebron@udesa.edu.ar', 'lecap', 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Larry_Bird_Lipofsky.jpg', '2003-03-03', 45489557, default, default);
 INSERT INTO usuarios
-VALUES(default, 'Ma24', 'stephen@udesa.edu.ar', 'splash', 'fotoperfil2', '2003-03-03', 42415374, default, default);
+VALUES(default, 'Ma24', 'stephen@udesa.edu.ar', 'splash', 'https://e0.365dm.com/22/05/2048x1152/skysports-steph-curry-nba-basketball_5771331.jpg', '2003-03-03', 42415374, default, default);
 INSERT INTO usuarios 
-VALUES(default, 'Ma25', 'mateo@udesa.edu.ar', 'mate', 'fotoperfil3', '2003-03-03', 42415543, default, default);
+VALUES(default, 'Ma25', 'mateo@udesa.edu.ar', 'mate', 'https://www.fcbarcelona.com/fcbarcelona/photo/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg', '2003-03-03', 42415543, default, default);
 INSERT INTO usuarios
-VALUES(default, 'Ma26', 'martin@udesa.edu.ar', 'mors', 'fotoperfil4', '2003-03-03', 43415398, default, default);
+VALUES(default, 'Ma26', 'martin@udesa.edu.ar', 'mors', 'https://cdn.nba.com/manage/2022/04/kareem-trophy-1982.jpg', '2003-03-03', 43415398, default, default);
 INSERT INTO usuarios 
-VALUES(default, 'Ma27', 'marcelo@udesa.edu.ar', 'conocelo', 'fotoperfil5', '2003-03-03', 43514632, default, default);
+VALUES(default, 'Ma27', 'marcelo@udesa.edu.ar', 'conocelo', 'https://ca-times.brightspotcdn.com/dims4/default/dbab71d/2147483647/strip/true/crop/3152x2104+0+0/resize/1200x801!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F7f%2Ff7%2F0c84ab96edd1db4726f968e0c665%2F2cae562360a74d3f86fe113bedcf3b1f', '2003-03-03', 43514632, default, default);
 
 
 create table productos(
@@ -102,3 +102,34 @@ INSERT INTO comentarios
 values(default,  5, 2, 'es lenta', default, default);
 INSERT INTO comentarios 
 values(default,  4, 5, 'poco espacio dentro del auto', default, default);
+INSERT INTO comentarios 
+values(default,  1, 2, 'Precio estimado?', default, default);
+INSERT INTO comentarios 
+values(default,  6, 4, 'Cuentan con envio fuera del pais?', default, default);
+INSERT INTO comentarios 
+values(default,  7, 1, 'Tiene bluetooth?', default, default);
+INSERT INTO comentarios 
+values(default,  8, 6, 'Muy buen producto!', default, default);
+INSERT INTO comentarios 
+values(default,  9, 3, 'Alcanza los 200KM/H?', default, default);
+INSERT INTO comentarios 
+values(default,  10, 4, 'No recomiendo', default, default);
+INSERT INTO comentarios 
+values(default,  1, 5, 'Tiene auto-piloto?', default, default);
+INSERT INTO comentarios 
+values(default,  6, 1, 'Se le puede sacar el aleron?', default, default);
+INSERT INTO comentarios 
+values(default,  7, 3, 'Me gustaria otro color', default, default);
+INSERT INTO comentarios 
+values(default,  8, 6, 'Vuela', default, default);
+INSERT INTO comentarios 
+values(default,  9, 2, 'Es todoterreno?', default, default);
+INSERT INTO comentarios 
+values(default,  10, 5, 'Entregan a domicilio?', default, default);
+
+
+
+
+
+
+
