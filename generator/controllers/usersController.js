@@ -2,6 +2,7 @@ const datos = require("../data/data")
 const data = require('../database/models');
 const bcrypt = require('bcryptjs');
 const usuarios = data.Usuario
+
  
 
 
@@ -128,9 +129,24 @@ var userController = {
     },
 
     edit: function(req, res){
-        res.render('profile-edit', {
-            usuario:datos.usuario,
-        })
+        if (req.session.usuario == undefined){
+            let errors = {}
+            errors.message = "Debes loguearte para editar tu perfil"
+            res.locals.errors = errors;
+            return res.render('login')
+        } else{
+            
+            let id = req.session.usuario.id
+            data.Usuario.findByPk(id)
+            .then(function(resultado){
+                if (id != req.params.id) {
+                    return res.redirect('/profile/id/${req.session.usuario.id')
+                } else {
+                return res.render('edit-profile', {datosNuevos: resultado})
+            }})
+            .catch( function(error){
+                console.log(error);
+            })}
     },
 
     destroy: (req,res) => {

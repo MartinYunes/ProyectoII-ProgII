@@ -23,16 +23,21 @@
 				<h2 class="products-title">Editar mi perfil</h2>
 			</div>
 
-			<form action="/users/profile/id/<%= locals.usuario.id %>" method="POST">
+			<form action="/edit-profile" method="POST">
 
 				<div>
 					<label> Foto de perfil:</label>
-					<input type="text" class="seleccionadorArchivos" id="imagen" name="foto_perfil">
+					<input type="file" class="seleccionadorArchivos" id="imagen" name="foto_perfil" value="<%=datosNuevos.foto_perfil%>">
+				</div>
+
+				<div>
+					<label> Mail:</label> 
+					<input type="email" name="mail" value="<%=datosNuevos.email%>">
 				</div>
 
 				<div>
 					<label> Usuario:</label>
-					 <input type="text" name="usuario" value="">
+					 <input type="text" name="usuario" value="<%=datosNuevos.usuario%>">
 				</div>
 
 				<div>

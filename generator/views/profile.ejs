@@ -22,7 +22,7 @@
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"><%= datosUsuario.usuario %> 
-						<a href="/users/edit-profile">
+						<a href="/users/edit-profile/">
 							<i class="fas fa-cog"></i>
 						</a>
 					</h1>
@@ -31,8 +31,8 @@
 				<div>
 					<ul class="">
 						<li>Email: <%= datosUsuario.email %></li>
-						<li>8 productos</li>
-						<li>Comentarios: <%= datosUsuario.email %></li>
+						<li>Productos: <%= datosUsuario.productos.length %></li>
+						<li>Comentarios: <%= datosUsuario.comentarios.length %></li>
 					</ul>
 				</div>
 			</div>
@@ -47,17 +47,21 @@
 				<h2 class="products-title">Mis productos</h2>
 			</div>
 			<!-- Show mis productos -->
-			<% for (let i=0; i<8; i++) {%>
+			<% for (let i=0; i<datosUsuario.productos.length; i++) {%>
+
 				<div class="col-12 col-sm-6 col-lg-3">
 					
+	
 					<section class="product-box">
-						<a href="/product">
+	
+						<a href="/product/id/<%=datosUsuario.productos[i].id%>">
+	
 							<figure class="product-box_image">
-								<img class= 'img-ind' src=<% %>>
+								<img class= 'img-ind' src=<%= datosUsuario.productos[i].imagenes %>>
 							</figure>
 							<article class="product-box_data">
-								<h2><%= %></h2>
-								<p>10 usuarios consultaron por tu producto</p>
+								<h2><%= datosUsuario.productos[i].nombre_producto%></h2>
+								<p><%= datosUsuario.productos[i].descripcion_producto%></p>
 							</article>
 						</a>
 					</section>
