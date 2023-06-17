@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
  });
 
 app.use(function(req,res,next){
-  if (req.cookies.userId != undefined && req.session.usuario == undefined) {
+  if (req.cookies.id != undefined && req.session.usuario == undefined) {
     let idUsuarioEnCookie = req.cookies.userId;
     db.Usuario.findByPk(idUsuarioEnCookie)
     .then((usuario) =>{
