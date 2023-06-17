@@ -136,7 +136,7 @@ var userController = {
     destroy: (req,res) => {
 
         req.session.usuario=null
-        res.clearCookie('userId')
+        res.clearCookie('userID')
 
         return res.redirect("/users/login")
     }

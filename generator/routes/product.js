@@ -18,6 +18,6 @@ router.post('/editar/id/:id',productController.saveEdit);
 router.post('/eliminar/id/:id',productController.eliminar);
 
 //Armamos el metodo por el cual guardamos el comentario
-router.post('/comentarios',productController.comentarios);
+router.post('/id/:id',productController.comentarios);
   
 module.exports = router;

@@ -45,10 +45,14 @@
 						<% } %>
 
 					</section>
-					<form class="form" action="/product/comentarios" method="POST">
-						<input class="form-input" type="text" value="" name="texto" placeholder="Agregar comentario">
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-
+					<form class="form" action="/product/id/<%= producto.id %>" method="POST">
+						<% if(locals.usuario == undefined) { %>
+							<input disabled="true" class="form-input" type="text" value="" name="texto" placeholder="Agregar comentario">
+							<button disabled="true" type="submit" class="buy-now-button">Tienes que registrarte para comentar</button>
+						<% } else{ %>
+							<input class="form-input" type="text" value="" name="texto" placeholder="Agregar comentario">
+							<button type="submit" class="buy-now-button">Agregar Comentario</button>
+						<% } %>
 					</form>
 					<hr>
 				</div>
